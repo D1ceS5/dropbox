@@ -1,0 +1,32 @@
+@import "../../variables.scss";
+
+.sidebarButton{
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    background-color: $light-bg;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    
+    &:hover{
+        background-color: $light-bg-hover;
+        color: $light-text;
+    }
+    &.active{
+        background-color: $light-bg-hover;
+        color: $light-text;
+    }
+}
+
+.sidebarButton.active .sidebarButton-icon{
+    filter: brightness(1000%);
+}
+.sidebarButton:hover .sidebarButton-icon{
+    filter: brightness(1000%);
+}
+.sidebarButton-text{
+    font-family: "Sharp Grotesk Medium 25 Regular",sans-serif;
+    font-size: 14px;
+}

@@ -1,0 +1,45 @@
+@import "../../variables.scss";
+
+.item{
+    margin: 0 20px;
+    padding: 10px 10px;
+    border-bottom: 1px solid $light-border;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $light-text;
+    font-weight: 100;
+    cursor: pointer;
+    &:hover{
+        background-color: $light-bg;
+    }
+}
+.listHeader{
+    margin: 0 20px;
+    padding: 10px 10px;
+    border-bottom: 1px solid $light-border;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $light-text;
+    font-weight: 100;
+   
+}
+.item-icon{
+    width: 30px;
+}
+.item-name{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 50%;
+}
+.item-extension{
+    width: 20%;
+}
+.item-size{
+    width: 10%;
+}
+.item-modified{
+    width: 20%;
+}

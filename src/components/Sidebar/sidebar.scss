@@ -1,0 +1,16 @@
+@import "../../variables.scss";
+
+.sidebar{
+    background-color: $light-bg;
+    width: 250px;
+    min-width: 250px;
+    height: 100vh;
+    color: $dark-text;
+    font-family: "Sharp Grotesk Medium 25 Regular";
+    border-right: 1px solid $light-border;
+}
+
+.logo{
+    padding: 20px;
+    width: 30px;
+}
