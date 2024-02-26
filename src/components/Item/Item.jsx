@@ -1,10 +1,6 @@
 import "./item.scss"
 import { download } from "../../API/GetList";
 
-
-
-
-
 function Item({ file, viewData }) {
 
     const { icon, name, extension, size, modified, type } = viewData
