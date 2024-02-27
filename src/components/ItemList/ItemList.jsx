@@ -43,9 +43,9 @@ function getFileExtension(fileName) {
 }
 
 const iconByTag = {
-    folder: "../../public/assets/Files/regular-folder.png",
+    folder: "../../assets/Files/regular-folder.png",
     file: (extension) => {
-        return `../../public/assets/Files/${extension}.svg`
+        return `../../assets/Files/${extension}.svg`
     }
 }
 
