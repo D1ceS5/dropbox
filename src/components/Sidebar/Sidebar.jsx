@@ -12,10 +12,10 @@ function Sidebar() {
                 <img className="close" src='../../public/assets/Sidebar/close.svg' onClick={toggleMenu} />
             </div>
             <div>
-                <SidebarButton active={true} icon={'../../public/assets/Sidebar/all-files.svg'} text={"All files"} />
-                <SidebarButton icon={'../../public/assets/Sidebar/photos.svg'} text={"Photos"} />
-                <SidebarButton icon={'../../public/assets/Sidebar/shared.svg'} text={"Shared"} />
-                <SidebarButton icon={'../../public/assets/Sidebar/signatures.svg'} text={"Signatures"} />
+                <SidebarButton active={true} icon={'../../assets/Sidebar/all-files.svg'} text={"All files"} />
+                <SidebarButton icon={'../../assets/Sidebar/photos.svg'} text={"Photos"} />
+                <SidebarButton icon={'../../assets/Sidebar/shared.svg'} text={"Shared"} />
+                <SidebarButton icon={'../../assets/Sidebar/signatures.svg'} text={"Signatures"} />
             </div>
 
         </div>
