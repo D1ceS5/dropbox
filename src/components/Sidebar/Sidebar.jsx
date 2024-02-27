@@ -8,8 +8,8 @@ function Sidebar() {
     return <>
         <div className={menuState ? "sidebar active" : "sidebar"}>
             <div className='sidebar-header'>
-                <a href='/'><img className="logo" src='../../public/assets/Sidebar/Dropbox_Icon.svg' /></a>
-                <img className="close" src='../../public/assets/Sidebar/close.svg' onClick={toggleMenu} />
+                <a href='/'><img className="logo" src='../../assets/Sidebar/Dropbox_Icon.svg' /></a>
+                <img className="close" src='../../assets/Sidebar/close.svg' onClick={toggleMenu} />
             </div>
             <div>
                 <SidebarButton active={true} icon={'../../assets/Sidebar/all-files.svg'} text={"All files"} />
