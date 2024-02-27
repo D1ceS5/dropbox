@@ -6,7 +6,7 @@ import Searchbar from "../Searchbar/Searchbar"
 function Header() {
     let { toggleMenu } = useContext(GlobalContext)
     return <div className="header">
-        <img src="../../src/assets/Header/menu-bar.svg" className="burger-menu" onClick={toggleMenu} />
+        <img src="../../public/assets/Header/menu-bar.svg" className="burger-menu" onClick={toggleMenu} />
         <Searchbar />
     </div>
 
