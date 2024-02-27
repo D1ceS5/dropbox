@@ -12,7 +12,7 @@ function ContentWindow() {
         let params = new URLSearchParams(window.location.search);
         let pathParam = params.get("path"); 
         let path = (pathParam && pathParam.length) > 1 ? decodeURIComponent(pathParam) : "/Public"
-        console.log("Path", path)
+        
         listFiles(path).then(r => {
             console.log(r);
             setFiles(r)

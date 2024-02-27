@@ -14,7 +14,7 @@ function Item({ file, viewData }) {
     }
 
     function addDefaultSrc(ev) {
-        ev.target.src = '../../src/assets/Files/unidentified-file-type.png'
+        ev.target.src = '../../src/assets/Files/unknown.svg'
     }
 
     return <div className={type} onClick={itemClick}>

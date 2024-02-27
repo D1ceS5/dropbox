@@ -1,6 +1,7 @@
 import "./itemList.scss"
 import Item from "../Item/Item"
-
+import { GlobalContext } from "../../context";
+import { useContext } from "react";
 
 function convertDate(dateString) {
 
@@ -49,16 +50,17 @@ const iconByTag = {
 }
 
 function ItemList({ items }) {
+    let { searchQuery } = useContext(GlobalContext)
+
     return <div className="itemList">
         <Item file={{}} viewData={{name: "Name",extension:"Extension",size:"Size",modified:"Modified",type:"listHeader"}} />
         {
-            items?.map((f) => {
+            items?.filter(f=>f.name.toLowerCase().includes(searchQuery)).map((f) => {
                 let icon = iconByTag[f['.tag']]
                 let src;
                 if (typeof (icon) === 'string') src = icon
                 else src = icon(getFileExtension(f.name))
 
-                console.log(f['.tag']);
 
                 const viewData = {
                     icon: src,

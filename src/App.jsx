@@ -5,15 +5,20 @@ import ContentWindow from './components/ContentWindow/ContentWindow'
 function App() {
 
   const [menuState, setMenuState] = useState(false)
+  const [searchQuery, setSearchQuery] = useState("")
 
   function toggleMenu() {
-    console.log("Toggle");
     setMenuState(!menuState)
+  }
+
+  function changeQuery(query) {
+    console.log(query);
+    setSearchQuery(query)
   }
 
   return (
     <div style={{ display: "flex", flexDirection: "row" }} >
-      <GlobalContext.Provider value={{ menuState,toggleMenu }}>
+      <GlobalContext.Provider value={{ menuState, toggleMenu, searchQuery, changeQuery }}>
         <Sidebar />
         <ContentWindow />
       </GlobalContext.Provider>

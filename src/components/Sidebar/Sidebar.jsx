@@ -5,11 +5,10 @@ import { useContext } from "react"
 
 function Sidebar() {
     let { menuState,toggleMenu } = useContext(GlobalContext)
-    console.log("Current state", menuState);
     return <>
         <div className={menuState ? "sidebar active" : "sidebar"}>
             <div className='sidebar-header'>
-                <img className="logo" src='../../src/assets/Sidebar/Dropbox_Icon.svg' />
+                <a href='/'><img className="logo" src='../../src/assets/Sidebar/Dropbox_Icon.svg' /></a>
                 <img className="close" src='../../src/assets/Sidebar/close.svg' onClick={toggleMenu} />
             </div>
             <div>
