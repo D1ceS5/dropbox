@@ -8,7 +8,7 @@ function ContentWindow() {
 
     useEffect(() => {
         listFiles("").then(r => {
-            console.log(r);
+ 
             setFiles(r)
         })
     }, [])
