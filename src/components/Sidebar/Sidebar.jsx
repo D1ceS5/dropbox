@@ -1,10 +1,17 @@
 import './sidebar.scss'
 import SidebarButton from '../SidebarButton/SidebarButton'
-//import allFiles from "../../src/assets/all-files.svg"
+import { GlobalContext } from "../../context"
+import { useContext } from "react"
+
 function Sidebar() {
+    let { menuState,toggleMenu } = useContext(GlobalContext)
+    console.log("Current state", menuState);
     return <>
-        <div className="sidebar">
-            <img className="logo" src='../../src/assets/Sidebar/Dropbox_Icon.svg' />
+        <div className={menuState ? "sidebar active" : "sidebar"}>
+            <div className='sidebar-header'>
+                <img className="logo" src='../../src/assets/Sidebar/Dropbox_Icon.svg' />
+                <img className="close" src='../../src/assets/Sidebar/close.svg' onClick={toggleMenu} />
+            </div>
             <div>
                 <SidebarButton active={true} icon={'../../src/assets/Sidebar/all-files.svg'} text={"All files"} />
                 <SidebarButton icon={'../../src/assets/Sidebar/photos.svg'} text={"Photos"} />

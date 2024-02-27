@@ -3,14 +3,41 @@
 .sidebar{
     background-color: $light-bg;
     width: 250px;
-    min-width: 250px;
+    // min-width: 250px;
     height: 100vh;
     color: $dark-text;
-    font-family: "Sharp Grotesk Medium 25 Regular";
     border-right: 1px solid $light-border;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+    @media (max-width: 800px) { 
+        position: absolute;
+        width: 0px;
+    }
+    z-index: 4;
+}
+.active{
+    @media (min-width: 800px) { 
+        width: 250px;
+    }
+    width: 70%;
+    
+    
+}
+
+.sidebar-header{
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo{
     padding: 20px;
     width: 30px;
+}
+.close{
+    cursor: pointer;
+    width: 30px;
+    padding: 20px;
+    @media (min-width: 800px) { 
+       display: none;
+    }
 }

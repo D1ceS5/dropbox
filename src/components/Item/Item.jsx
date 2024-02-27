@@ -1,14 +1,16 @@
 import "./item.scss"
-import { download } from "../../API/GetList";
+import { download } from "../../API/dropbox";
 
 function Item({ file, viewData }) {
 
     const { icon, name, extension, size, modified, type } = viewData
-    const { id, tag } = file
+    const { id, tag, path_display } = file
 
     function itemClick() {
         if(tag === "file") download(id, name)
-        else console.log("Folder");
+        else if (tag) {
+            window.location.href = `${window.location.origin}?path=${path_display}`
+        }
     }
 
     function addDefaultSrc(ev) {

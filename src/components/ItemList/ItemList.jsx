@@ -1,6 +1,7 @@
 import "./itemList.scss"
 import Item from "../Item/Item"
 
+
 function convertDate(dateString) {
 
     const date = new Date(dateString);
@@ -57,6 +58,8 @@ function ItemList({ items }) {
                 if (typeof (icon) === 'string') src = icon
                 else src = icon(getFileExtension(f.name))
 
+                console.log(f['.tag']);
+
                 const viewData = {
                     icon: src,
                     name: f.name,
@@ -70,7 +73,7 @@ function ItemList({ items }) {
                     tag: f['.tag']
                 }
 
-                return <Item key={f.name} viewData={viewData} file={f} />
+                return <Item key={f.name} viewData={viewData} file={file} />
             })
         }
     </div>

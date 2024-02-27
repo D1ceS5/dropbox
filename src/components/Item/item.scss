@@ -1,6 +1,6 @@
 @import "../../variables.scss";
 
-.item{
+.item {
     margin: 0 20px;
     padding: 10px 10px;
     border-bottom: 1px solid $light-border;
@@ -8,13 +8,18 @@
     align-items: center;
     justify-content: space-between;
     color: $light-text;
-    font-weight: 100;
+    gap: 15px;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         background-color: $light-bg;
     }
 }
-.listHeader{
+
+.listHeader {
+    position: sticky;
+    top: 0;
+    background-color: $dark-bg;
     margin: 0 20px;
     padding: 10px 10px;
     border-bottom: 1px solid $light-border;
@@ -22,24 +27,36 @@
     align-items: center;
     justify-content: space-between;
     color: $light-text;
-    font-weight: 100;
-   
+    gap: 15px;
 }
-.item-icon{
+
+.item-icon {
     width: 30px;
 }
-.item-name{
+
+.item-name {
     display: flex;
     align-items: center;
     gap: 5px;
-    width: 50%;
+    width: 45%;
+    min-width: 150px;
 }
-.item-extension{
+
+.item-extension {
     width: 20%;
+    min-width: 150px;
+
+    @media (max-width: 1000px) { display: none;}
 }
-.item-size{
-    width: 10%;
+
+.item-size {
+    width: 15%;
+    min-width: 150px;
+    @media (max-width: 900px) { display: none;}
 }
-.item-modified{
+
+.item-modified {
     width: 20%;
+    min-width: 150px;
+    @media (max-width: 400px) { display: none;}
 }
